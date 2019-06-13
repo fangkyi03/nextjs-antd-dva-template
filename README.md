@@ -1,4 +1,4 @@
-最完美的nextjs解决方案
+最优的nextjs解决方案
 
 1.解决 antd 与 cssModules 不兼容的问题
 
