@@ -41,7 +41,7 @@ export default class Index extends Component {
 
   renderModalButton = () =>{
     return this.formModalArr.map((e,i)=>{
-      return <Button onClick={()=>this.onTest1(i)}>{'打开测试modal' + i}</Button>
+      return <Button onClick={()=>this.onTest1(i)}>{'打开测试modal' + i + '本页面不走生命周期'}</Button>
     })
   }
 
@@ -50,6 +50,7 @@ export default class Index extends Component {
       <div className={styles.main}>
         {this.renderModalButton()}
         {this.renderModalArr()}
+        <Button onClick={this.onUpdate}>强制刷新:本页面走生命周期</Button>
         <Link href={'/test1?id=1&a=1'}>带参数跳转</Link>
         <Link href={'/test2'}>接口测试1</Link>
         <Link href={'/test2?id=1'}>接口传参测试</Link>
