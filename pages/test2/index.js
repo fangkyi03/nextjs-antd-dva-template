@@ -29,7 +29,6 @@ export default class Test3 extends Component {
   }
 
   onNetTest1 = () =>{
-    apiTool.clear(this, 'Test3')
     apiTool.send(this,[
         {
             url:'/sug?code=utf-8&q=1',
@@ -41,7 +40,6 @@ export default class Test3 extends Component {
 
   onNetTest2 = () => { 
     // 这里可以同时进行多个请求 如果target相同 那么请求的结果会进行合并 页面只会刷新一次
-    apiTool.clear(this,'Test3')
     apiTool.send(this,[
         {
             url: '/sug?code=utf-8&q=1',
