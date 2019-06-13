@@ -1,5 +1,16 @@
 最优的nextjs解决方案
 
+本例总共3个demo
+
+demo1 
+演示修改以后的createDva 如何做到数据隔离
+
+demo2
+演示路由跳转
+
+demo3
+演示网络请求
+
 1.解决 antd 与 cssModules 不兼容的问题
 
 2.解决 antd 与 export 不兼容问题
