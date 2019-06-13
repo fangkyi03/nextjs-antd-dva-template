@@ -9,8 +9,12 @@ export default class FormModal extends Component {
     apiTool.hiddenModal(this,this.props.modelList[0])
   }
 
+  componentWillUpdate(nextProps, nextState) {
+    console.log('更新生命周期开始', this.props.modelList[0])
+  }
+  
   componentDidUpdate(prevProps, prevState) {
-    console.log('更新生命周期',this.props.modelList[0])
+    console.log('更新生命周期结束', this.props.modelList[0])
   }
   
   render() {
