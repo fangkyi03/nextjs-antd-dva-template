@@ -88,11 +88,6 @@ function createDva(modelList, { option = {} } = {}) {
             isDestroy: true
         }
 
-        constructor(props) {
-            super(props);
-            this.ComponentS = this.props.Component
-        }
-
         componentWillUnmount() {
             if (this.props.isDestroy) {
                 apiTool.clearList(this, this.props.modelList)
@@ -112,7 +107,7 @@ function createDva(modelList, { option = {} } = {}) {
     }
 
     return (Component) => {
-        const ComponentWithDva = (props = {},context) => {
+        const ComponentWithDva = (props = {}) => {
             const { store, initialProps, initialState,...arg } = props;
             const ComponentView = connect((state) => {
                 let obj = {}
