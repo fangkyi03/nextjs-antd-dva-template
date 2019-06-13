@@ -10,11 +10,11 @@ export default class FormModal extends Component {
   }
 
   componentWillUpdate(nextProps, nextState) {
-    console.log('更新生命周期开始', this.props.modelList[0])
+    console.log('更新生命周期开始', this.props.modelList[0],this.props.title)
   }
   
   componentDidUpdate(prevProps, prevState) {
-    console.log('更新生命周期结束', this.props.modelList[0])
+    console.log('更新生命周期结束', this.props.modelList[0], this.props.title)
   }
   
   render() {
