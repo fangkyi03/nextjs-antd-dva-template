@@ -33,7 +33,7 @@ export default class Test3 extends Component {
         {
             url:'/sug?code=utf-8&q=1',
             method:'GET',
-            target:'Test3'
+            target:'Test3',
         }
     ])
   }
@@ -99,12 +99,13 @@ export default class Test3 extends Component {
   }
 
   renderView = () =>{
-    const {a,b,c,d} = this.props
+    const {a,b,c,d,result} = this.props
     return (
       <div>
         <Button onClick={this.onNetTest1}>接口测试写法1</Button>
         <Button onClick={this.onNetTest2}>接口测试写法2</Button>
         <Button onClick={this.onNetTest3}>接口测试美化写法</Button>
+        {result && this.renderList(result)}
         {a && this.renderList(a)}
         {b && this.renderList(b)}
         {c && this.renderList(c)}
