@@ -50,6 +50,9 @@ function createDvaStore(initialState, modelList) {
         fetch({
             netTool: NetTools,
             onGLNetStart: ({ retData }) => {
+                if (retData.result) {
+                    return retData
+                }
                 if ((retData.code === 200) || retData.status === 0) {
                     return retData;
                 }

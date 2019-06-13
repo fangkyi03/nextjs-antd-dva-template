@@ -1,46 +1,15 @@
-# Custom Fastify Server example
+最完美的nextjs解决方案
 
-## How to use
+1.解决 antd 与 cssModules 不兼容的问题
 
-### Using `create-next-app`
+2.解决 antd 与 export 不兼容问题
 
-Execute [`create-next-app`](https://github.com/segmentio/create-next-app) with [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) or [npx](https://github.com/zkat/npx#readme) to bootstrap the example:
+3.自带getRouterParams 路由参数获取功能 避免自己手动判断
 
-```bash
-npx create-next-app --example custom-server-fastify custom-server-fastify-app
-# or
-yarn create next-app --example custom-server-fastify custom-server-fastify-app
-```
+4.增加createDva具备按需加载 用完即清空对应model的功能 彻底的模块化隔离 功能相同 但是想分开用不同的model隔离数据的时候 非常有作用 比如表单数据
 
-### Download manually
+5.server.js与next.config启动的时候 会自动识别pages目录下的文件 不需要手动添加目录 跟umi差不多
 
-Download the example:
+6.弱化model文件 全局只需要使用一个fetchModel 即可完成所有的网络请求 详情见测试2
 
-```bash
-curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/custom-server-fastify
-cd custom-server-fastify
-```
-
-Install it and run:
-
-```bash
-npm install
-npm run dev
-# or
-yarn
-yarn dev
-```
-Fastify
-Deploy it to the cloud with [now](https://zeit.co/now) ([download](https://zeit.co/download))
-
-```bash
-now
-```
-
-## The idea behind the example
-
-Most of the times the default Next server will be enough but sometimes you want to run your own server to customize routes or other kind of the app behavior. Next provides a [Custom server and routing](https://github.com/zeit/next.js#custom-server-and-routing) so you can customize as much as you want.
-
-Because the Next.js server is just a node.js module you can combine it with any other part of the node.js ecosystem. in this case we are using [Fastify](https://github.com/fastify/fastify) to build a custom router on top of Next.
-
-The example shows a server that serves the component living in `pages/a.js` when the route `/b` is requested and `pages/b.js` when the route `/a` is accessed. This is obviously a non-standard routing strategy. You can see how this custom routing is being made inside `server.js`.
+7.

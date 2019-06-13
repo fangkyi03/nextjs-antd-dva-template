@@ -50,6 +50,9 @@ export default class Index extends Component {
       <div className={styles.main}>
         {this.renderModalButton()}
         {this.renderModalArr()}
+        <Link href={'/test1?id=1&a=1'}>带参数跳转</Link>
+        <Link href={'/test2'}>接口测试1</Link>
+        <Link href={'/test2?id=1'}>接口传参测试</Link>
       </div>
     )
   }
