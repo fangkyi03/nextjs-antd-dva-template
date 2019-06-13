@@ -26,3 +26,4 @@ demo3
 7.弱化model使用 改为只有getValue 跟 setValue 两个api 一切都基于这两个基础函数
 
 8.开箱即用 不需要做任何多余的修改
+
