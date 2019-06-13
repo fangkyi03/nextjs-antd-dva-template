@@ -3,25 +3,16 @@ import { Button } from 'antd';
 import createDva from '../../command/createDva';
 import apiTool from '../../command/apiTool';
 import api from '../../command/api';
+import LoadingComponent from '../../components/LoadComponent/index';
 
 @createDva(['Test3'])
 export default class Test3 extends Component {
-
-  onNetTest1 = () =>{
-    apiTool.send(this,[
-        {
-            url:'/sug?code=utf-8&q=1',
-            method:'GET',
-            target:'Test3'
-        }
-    ])
-  }
 
   componentDidMount() {
     // 演示带参数请求
     const routerParams = apiTool.getRouterParams(this)
     if (routerParams.id) {
-        apiTool.send(this,[
+        apiTool.send(this, [
             {
                 url: '/sug?code=utf-8&q=' + routerParams.id,
                 method: 'GET',
@@ -31,11 +22,26 @@ export default class Test3 extends Component {
                 }
             },
         ])
+    }else {
+        // 如果没有参数直接手动去除loading
+        apiTool.setValue(this,'Test3',{isShow:false})
     }
+  }
+
+  onNetTest1 = () =>{
+    apiTool.clear(this, 'Test3')
+    apiTool.send(this,[
+        {
+            url:'/sug?code=utf-8&q=1',
+            method:'GET',
+            target:'Test3'
+        }
+    ])
   }
 
   onNetTest2 = () => { 
     // 这里可以同时进行多个请求 如果target相同 那么请求的结果会进行合并 页面只会刷新一次
+    apiTool.clear(this,'Test3')
     apiTool.send(this,[
         {
             url: '/sug?code=utf-8&q=1',
@@ -81,7 +87,7 @@ export default class Test3 extends Component {
         api.test('Test3').getList()({
             // 如果接口不符合要求 或者同名target中 有返回相同名称的数据 那么可以在这里进行转换 否则相同名称的会被合并
             tranData: ({ result }) => {
-                return { d: result }
+                return { d: result,a:[],b:[],c:[] }
             },
             // 每个单条接口如果想捕获成功或者失败都可以直接写 单条onError 捕获错误以后 全局的onError不会执行 具体可见createDva
             onCallBack:()=>{
@@ -94,7 +100,7 @@ export default class Test3 extends Component {
     ])
   }
 
-  render() {
+  renderView = () =>{
     const {a,b,c,d} = this.props
     return (
       <div>
@@ -106,6 +112,16 @@ export default class Test3 extends Component {
         {c && this.renderList(c)}
         {d && this.renderList(d)}
       </div>
+    )
+  }
+
+  render() {
+    const {isShow} = this.props
+    return (
+        <LoadingComponent
+            isShow={isShow}
+            renderView={this.renderView}
+        />
     )
   }
 }

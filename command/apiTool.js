@@ -15,6 +15,11 @@ export const clearList = function (thz, payload) {
     })
 }
 
+// 清除单个model
+export const clear = function (thz,modelName,) {
+    thz.props.dispatch({ type: `${modelName}/celar` })
+}
+
 // 显示modal
 export const showModal = function(thz,modelName) {
     thz.props.dispatch({ type: `${modelName}/setValue`, payload:{
@@ -40,5 +45,6 @@ export default {
     clearList,
     getRouterParams,
     showModal,
-    hiddenModal
+    hiddenModal,
+    clear
 }

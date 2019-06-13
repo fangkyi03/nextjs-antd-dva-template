@@ -26,3 +26,5 @@ demo3
 7.弱化model使用 改为只有getValue 跟 setValue 两个api 一切都基于这两个基础函数
 
 8.开箱即用 不需要做任何多余的修改
+
+9.增加loading功能 loading的isShow属性会跟网络请求绑定在一起 网络请求结束以后 自动会修改isShow状态来控制loading是否继续显示
