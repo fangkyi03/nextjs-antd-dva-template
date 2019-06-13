@@ -13,7 +13,7 @@ demo3
 
 1.解决 antd 与 cssModules 不兼容的问题
 
-2.解决 antd 与 export 不兼容问题
+2.解决 antd 与 nextjs export 不兼容问题
 
 3.自带getRouterParams 路由参数获取功能 避免自己手动获取路由参数
 
