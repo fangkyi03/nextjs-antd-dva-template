@@ -64,7 +64,7 @@ export default class FormTest1 extends Component {
     return (
       <div>
         <div>
-            本例子演示表单formView共用同一个formData
+            本例子演示表单formView使用各自数据源
         </div>
         <Button onClick={()=>this.onSetValue(1)}>
           修改测试1编辑框数据
