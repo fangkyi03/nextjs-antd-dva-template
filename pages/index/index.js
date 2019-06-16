@@ -54,6 +54,8 @@ export default class Index extends Component {
         <Link href={'/test1?id=1&a=1'}>带参数跳转</Link>
         <Link href={'/test2'}>接口测试1</Link>
         <Link href={'/test2?id=1'}>接口传参测试</Link>
+        <Link href={'/formTest'}>表单演示(共用同一个表单数据源)</Link>
+        <Link href={'/formTest1'}>表单演示(使用各自表单数据源)</Link>
       </div>
     )
   }
