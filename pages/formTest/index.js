@@ -17,8 +17,8 @@ export default class FormTest extends Component {
           }
       ]
       this.formArr = Array(2).fill({}).map((e,i)=>{
-        const Form = createDva(['formTest' + (i + 1)])((props) => <FormView data={this.formDataArr} {...props} />)
-        return <Form/>
+        const Form = createDva(['formTest' + (i + 1)])(FormView)
+        return <Form data={this.formDataArr}/>
       })
   }
   
