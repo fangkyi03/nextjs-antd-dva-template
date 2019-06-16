@@ -51,6 +51,15 @@ export default class FormTest1 extends Component {
     console.log('表单修改不会影响自身页面刷新')
   }
 
+  onClear = () =>{
+    apiTool.setValue(this,'formTest1',{
+      dataSource:{a1:'',a2:''}
+    })
+    apiTool.setValue(this, 'formTest2', {
+      dataSource: { a1: '', a2: '' }
+    })
+  }
+
   render() {
     return (
       <div>
@@ -63,6 +72,7 @@ export default class FormTest1 extends Component {
         <Button onClick={()=>this.onSetValue(2)}>
           修改测试2编辑框数据
         </Button>
+        <Button onClick={this.onClear}>清空数据</Button>
         {this.formArr}
       </div>
     )
