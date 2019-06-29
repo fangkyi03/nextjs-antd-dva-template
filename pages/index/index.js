@@ -6,8 +6,7 @@ import Link from 'next/link'
 import createDva from '../../command/createDva';
 import FormModal from '../../components/FormModal/index';
 
-@createDva([])
-export default class Index extends Component {
+class Index extends Component {
 
   constructor(props) {
     super(props);
@@ -22,6 +21,10 @@ export default class Index extends Component {
 
   onTest1 = (i) =>{
     apiTool.showModal(this,'test' + i)
+  }
+
+  static async getInitialProps(props) {
+    console.log('输出123123')
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -60,3 +63,5 @@ export default class Index extends Component {
     )
   }
 }
+
+export default createDva([])(Index)

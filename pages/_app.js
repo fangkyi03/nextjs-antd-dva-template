@@ -41,4 +41,9 @@ class AppComponent extends React.Component {
         )
     }
 }
+
+AppComponent.getInitialProps = (props) => {
+    return props.Component.getInitialProps?props.Component.getInitialProps(props):{}
+}
+
 export default AppComponent
