@@ -1,6 +1,6 @@
 最优的nextjs解决方案
 
-本例总共5个demo
+本例总共6个demo
 
 demo1 
 演示修改以后的createDva 如何做到数据隔离
@@ -17,6 +17,8 @@ demo4
 demo5
 演示多个表单使用各自的数据源 表单生命周期只会走一次 表单的赋值刷新 不会导致自身页面刷新
 
+demo6
+演示如何转换pdm并且将pdm生成的数据转换成mock接口进行请求
 
 1.解决 antd 与 cssModules 不兼容的问题
 
