@@ -10,6 +10,10 @@ export default class MockTest extends Component {
         {
             mock: 'getData',
             target: 'MockTest',
+            // method:'POST' || 'GET'
+            // 以后想用实际真实接口的时候 只需要增加url字段即可
+            // 其余字段数据都可以被真实接口进行使用而不需要做额外处理
+            // url:'/api/xxx'
         }
     ])   
   }
