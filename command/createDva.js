@@ -6,6 +6,7 @@ import * as NetTools from './netTool';
 import fetch from '../models/fetch';
 import apiTool from './apiTool';
 import {message} from 'antd'
+import * as mockTool from '../mockjs'
 
 const checkServer = () => Object.prototype.toString.call(global.process) === '[object process]';
 
@@ -48,6 +49,7 @@ function createDvaStore(initialState, modelList) {
     }
     app.model(
         fetch({
+            mockTool,
             netTool: NetTools,
             onGLNetStart: ({ retData }) => {
                 if (retData.result) {

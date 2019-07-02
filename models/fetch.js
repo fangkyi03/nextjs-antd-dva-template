@@ -47,6 +47,7 @@ export default function getFetchData(fetchConfig) {
     extendAttr,
     GLParams,
     GLTimeOut,
+    mockTool
   } = fetchConfig;
   return {
     namespace: 'fetch',
@@ -91,6 +92,11 @@ export default function getFetchData(fetchConfig) {
             const host = obj.host ? obj.host : '/api';
             const base = obj.base;
             const appname = obj.appName;
+            const mock = obj.mock
+            if (mock) {
+              ret[keyName] = mockTool[mock](obj)
+              continue
+            }
             if (url) {
               let urlAddress = netApi
                 ? netApi[url]

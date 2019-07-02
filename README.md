@@ -37,3 +37,6 @@ demo5
 9.增加loading功能 loading的isShow属性会跟网络请求绑定在一起 网络请求结束以后 自动会修改isShow状态来控制loading是否继续显示
 
 10.增加getInitialProps控制
+
+11.支持pdm转mock 具体可看mockTest文件 mock请求函数 请看mockjs文件 所有
+注:pdm转换功能本地没有提供pdm文件 请自己修改pdm/index.js下的init函数来生产mockData

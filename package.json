@@ -33,6 +33,7 @@
     "jimp": "^0.6.4",
     "lqip-loader": "^2.2.0",
     "lru-cache": "^5.1.1",
+    "mockjs": "^1.0.1-beta3",
     "next": "^8.1.0",
     "next-inferno": "^0.1.0",
     "next-progressbar": "^1.0.0",
