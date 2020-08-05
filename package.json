@@ -19,7 +19,7 @@
     "dva": "^2.3.0",
     "dva-no-router": "^1.2.1",
     "dvajs": "^0.1.8",
-    "fastify": "2.1.0",
+    "fastify": "2.15.1",
     "image-trace-loader": "^0.1.0",
     "imagemin-gifsicle": "^6.0.1",
     "imagemin-mozjpeg": "^8.0.0",
