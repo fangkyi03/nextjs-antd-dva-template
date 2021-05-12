@@ -48,7 +48,7 @@
     "responsive-loader": "^1.2.0",
     "stylus": "^0.54.5",
     "svg-sprite-loader": "^4.1.6",
-    "swiper": "^4.4.6",
+    "swiper": "^6.5.1",
     "webp-loader": "^0.4.0"
   },
   "devDependencies": {
